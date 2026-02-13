@@ -123,6 +123,11 @@ export default function EditInvoiceForm({
         </Link>
         <Button type="submit">Edit Invoice</Button>
       </div>
+      <div id="form-error" aria-live="polite" aria-atomic="true">
+        {state.message && (
+          <p className="mt-2 text-sm text-red-500">{state.message}</p>
+        )}
+      </div>
     </form>
   );
 }
